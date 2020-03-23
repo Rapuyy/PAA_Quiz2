@@ -1,12 +1,12 @@
 class RiverCrossing:
   GameOver = [
-              ["Cabbage","Goat","Wolf"],
+              ["Carrot","Goat","Wolf"],
               ["Goat","Wolf"],
-              ["Cabbage","Goat"]
+              ["Carrot","Goat"]
   ]
 
   #Constructor
-  def __init__ (self, left=["Wolf", "Cabbage", "Goat"], right=[], boat=False,
+  def __init__ (self, left=["Wolf", "Carrot", "Goat"], right=[], boat=False,
                 children=[]):
     self.left = left
     self.right = right
@@ -84,7 +84,7 @@ def find_solution(root, isDFS=False):
         else:
             visit = node.children + visit
         
-        if sorted(node.right) == ["Cabbage", "Goat", "Wolf"]:
+        if sorted(node.right) == ["Carrot", "Goat", "Wolf"]:
             solution = []
             while node is not None:
                 solution = [node] + solution
@@ -113,6 +113,6 @@ else:
     print("DFS solution = \n")
     for i in solution:
         count = count+1
-        print("Steps #" + str(count) + ":")
+        print("Step #" + str(count) + ":")
         print(i, '\b')
         print("\n")
