@@ -97,10 +97,10 @@ print("Choose Method:")
 print("1. DFS")
 print("2. BFS")
 menu = int(input())-1
+root = RiverCrossing()
 
 count = 0
 if (menu):
-    root = RiverCrossing()
     solution = find_solution(root, isDFS=False)
     print("BFS solution = \n")
     for i in solution:
